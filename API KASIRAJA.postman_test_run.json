@@ -1,0 +1,367 @@
+{
+	"id": "56775de0-896b-4e39-8786-0041e904942c",
+	"name": "API KASIRAJA",
+	"timestamp": "2024-09-07T13:50:54.441Z",
+	"collection_id": "36859354-9c907f82-548b-4c88-b529-3f3d8aeecb37",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 5,
+	"delay": 0,
+	"persist": true,
+	"status": "error",
+	"startedAt": "2024-09-07T13:50:50.017Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "9ef03ba6-07fd-4ccb-8ff5-02b52d0ff931",
+			"name": "Registration account",
+			"url": "https://kasir-api.zelz.my.id/registration",
+			"time": 120,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				120
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6ab058cd-5690-4080-911f-bcf21a9af4b9",
+			"name": "Regist munggunakan email yang sudah terdaftar",
+			"url": "https://kasir-api.zelz.my.id/registration",
+			"time": 106,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				106
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "66f60d59-688f-448f-9c86-0ce8a08d0370",
+			"name": "Regist tidak input nama",
+			"url": "https://kasir-api.zelz.my.id/registration",
+			"time": 126,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				126
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c184ac23-b12f-4aac-b2fb-b54d489b08a6",
+			"name": "Regist tidak input field email",
+			"url": "https://kasir-api.zelz.my.id/registration",
+			"time": 125,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				125
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "37b1b13a-400b-4728-963e-abf5b0873fca",
+			"name": "Login menggunakan email terdaftar",
+			"url": "https://kasir-api.zelz.my.id/authentications",
+			"time": 630,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response has the required fields - status, message, data": true,
+				"Access token and refresh token are non-empty strings": true,
+				"User object contains all the required fields": true,
+				"Content-Type header is application/json": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - status, message, data": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Access token and refresh token are non-empty strings": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User object contains all the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				630
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response has the required fields - status, message, data": true,
+					"Access token and refresh token are non-empty strings": true,
+					"User object contains all the required fields": true,
+					"Content-Type header is application/json": true
+				}
+			]
+		},
+		{
+			"id": "3dc98b75-c98c-48a6-8acb-7618d5dff87f",
+			"name": "Login tidak terdaftar",
+			"url": "https://kasir-api.zelz.my.id/authentications",
+			"time": 206,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				206
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1025b4a6-7bd2-4488-8e76-f90f30f572d7",
+			"name": "Add categories",
+			"url": "https://kasir-api.zelz.my.id/categories",
+			"time": 115,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				115
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0937ab06-d883-4fbf-b701-23ced8bd14b0",
+			"name": "View category detail",
+			"url": "https://kasir-api.zelz.my.id/categories/9e174377-85ee-4e05-8291-7b6410ace76c",
+			"time": 156,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				156
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7e117981-4ef5-4b79-8ed3-7f51771cdf99",
+			"name": "View category all",
+			"url": "https://kasir-api.zelz.my.id/categories",
+			"time": 121,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				121
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8eabc2a4-79f2-4ba1-96eb-818e6d369f4b",
+			"name": "Update salah satu category",
+			"url": "https://kasir-api.zelz.my.id/categories/9e174377-85ee-4e05-8291-7b6410ace76c",
+			"time": 137,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				137
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dd40a590-5619-4adc-a631-496522950ef2",
+			"name": "Delete categories",
+			"url": "https://kasir-api.zelz.my.id/categories/9e174377-85ee-4e05-8291-7b6410ace76c",
+			"time": 126,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				126
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "831d0f4d-1fc6-402d-92ae-6774c1b69d33",
+			"name": "Create new customers",
+			"url": "https://kasir-api.zelz.my.id/customers",
+			"time": 127,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				127
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b471921a-18ac-4496-8dc2-888de10e89c9",
+			"name": "View customer detail",
+			"url": "https://kasir-api.zelz.my.id/customers/f0428ea6-bfc1-44ee-97c6-eec74101734b",
+			"time": 145,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				145
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a5f10392-d3a3-47ee-b995-c95f9c48b50b",
+			"name": "View customer all",
+			"url": "https://kasir-api.zelz.my.id/customers/f0428ea6-bfc1-44ee-97c6-eec74101734b",
+			"time": 129,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				129
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2369,
+	"collection": {
+		"requests": [
+			{
+				"id": "9ef03ba6-07fd-4ccb-8ff5-02b52d0ff931",
+				"method": "POST"
+			},
+			{
+				"id": "6ab058cd-5690-4080-911f-bcf21a9af4b9",
+				"method": "POST"
+			},
+			{
+				"id": "66f60d59-688f-448f-9c86-0ce8a08d0370",
+				"method": "POST"
+			},
+			{
+				"id": "c184ac23-b12f-4aac-b2fb-b54d489b08a6",
+				"method": "POST"
+			},
+			{
+				"id": "37b1b13a-400b-4728-963e-abf5b0873fca",
+				"method": "POST"
+			},
+			{
+				"id": "3dc98b75-c98c-48a6-8acb-7618d5dff87f",
+				"method": "POST"
+			},
+			{
+				"id": "1025b4a6-7bd2-4488-8e76-f90f30f572d7",
+				"method": "POST"
+			},
+			{
+				"id": "0937ab06-d883-4fbf-b701-23ced8bd14b0",
+				"method": "GET"
+			},
+			{
+				"id": "7e117981-4ef5-4b79-8ed3-7f51771cdf99",
+				"method": "GET"
+			},
+			{
+				"id": "8eabc2a4-79f2-4ba1-96eb-818e6d369f4b",
+				"method": "PUT"
+			},
+			{
+				"id": "dd40a590-5619-4adc-a631-496522950ef2",
+				"method": "DELETE"
+			},
+			{
+				"id": "831d0f4d-1fc6-402d-92ae-6774c1b69d33",
+				"method": "POST"
+			},
+			{
+				"id": "b471921a-18ac-4496-8dc2-888de10e89c9",
+				"method": "GET"
+			},
+			{
+				"id": "a5f10392-d3a3-47ee-b995-c95f9c48b50b",
+				"method": "GET"
+			},
+			{
+				"id": "4783c6ac-051b-43aa-91c2-9eeaf755e02c",
+				"method": "PUT"
+			}
+		]
+	}
+}
